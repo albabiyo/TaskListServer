@@ -10,6 +10,7 @@
 
     <properties>
         <dropwizard.version>0.8.1</dropwizard.version>
+<jetty.port>9000</jetty.port>
     </properties>
     <dependencies>
         <dependency>
