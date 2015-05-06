@@ -21,20 +21,6 @@
     </dependencies>
     <build>
         <plugins>
-                 <plugin>
- <groupid>org.mortbay.jetty</groupid>
- <artifactid>maven-jetty-plugin</artifactid>
- <configuration>
-  <stopport>9966</stopport>
-  <stopkey>foo</stopkey>
-  <systemproperties>
-   <systemproperty>
-    <name>jetty.port</name>
-    <value>80</value>
-   </systemproperty>
-  </systemproperties>
- </configuration>
-</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
