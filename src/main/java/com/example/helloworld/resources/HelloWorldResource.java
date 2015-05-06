@@ -4,6 +4,8 @@ import com.example.helloworld.core.Task;
 import com.google.common.base.Optional;
 import com.codahale.metrics.annotation.Timed;
 import java.net.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 import javax.ws.rs.*;
@@ -25,18 +27,15 @@ public class HelloWorldResource {
         tasks=new ArrayList<Task>();
     }
     @POST
-    @Timed
-    public Response createTask(Task task, @Context UriInfo uriInfo)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Task createTask(Task task)
     {
         int id = counter_Tasks++;
         task.setId(id);
         tasks.add(task);
-	URI createdURI = URI.create(uriInfo.getBaseUri().toString() + "/Tasks/" + id);
-        return Response
-                .status(Status.CREATED)
-                .contentLocation(createdURI)
-                .entity(task)
-                .build();
+
+        return task;
     }
     @GET @Path("/{id}")
     @Timed
