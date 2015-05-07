@@ -10,7 +10,6 @@
 
     <properties>
         <dropwizard.version>0.8.1</dropwizard.version>
-<jetty.port>9000</jetty.port>
     </properties>
     <dependencies>
         <dependency>
@@ -21,17 +20,7 @@
     </dependencies>
     <build>
         <plugins>
-                  <plugin>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-maven-plugin</artifactId>
-      <version>9.2.1.v20140609</version>
-      <configuration>
-        <httpConnector>
-          <!--host>52.24.38.84</host-->
-          <port>9000</port>
-        </httpConnector>
-      </configuration>
-    </plugin>
+                  
                  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
