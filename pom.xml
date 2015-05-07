@@ -28,7 +28,7 @@
       <configuration>
         <httpConnector>
           <!--host>52.24.38.84</host-->
-          <port>9999</port>
+          <port>9000</port>
         </httpConnector>
       </configuration>
     </plugin>
